@@ -38,18 +38,21 @@ var app = {
         }
     },
 
-    slidePage: function(page) {
+    slidePage : function(page){
+var currentPageDest,
+self = this;
 
-        var currentPageDest,
-            self = this;
+if(!this.currentPage){
+$(page.el)
+.attr('class', 'page stage-center')
+.attr('id', 'homePage'); // add ID !
 
-        // If there is no current page (app just started) -> No transition: Position new page in the view port
-        if (!this.currentPage) {
-            $(page.el).attr('class', 'page stage-center');
-            $('body').append(page.el);
-            this.currentPage = page;
-            return;
-        }
+$('body').append(page.el);
+this.currentPage = page;
+return;
+}
+
+$('.stage-right, .stage-left').not('#homePage').remove(); // exclusion of the home page with the ID !
 
         // Cleaning up: remove old pages that were moved out of the viewport
         $('.stage-right, .stage-left').not('.homePage').remove();
