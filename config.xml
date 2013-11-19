@@ -7,14 +7,37 @@
 
     <!-- versionCode is optional and Android only -->
 
-    <name>Employee Directory</name>
+    <name>eConference</name>
 
     <description>
-        A simple employee directory application
+        This is a demo of the beta application eConference.
     </description>
 
-    <author href="http://coenraets.org" email="ccoenraets@gmail.com">
-        Christophe Coenraets
+    <author href="http://cauemotta.com" email="caue@cauemotta.com">
+        Caue Motta
     </author>
+	
+	<feature name="Contacts">
+    <param name="android-package" value="org.apache.cordova.ContactManager" />
+</feature>
+
+	<feature name="Camera">
+		<param name="android-package" value="org.apache.cordova.CameraLauncher" />
+	</feature>
+	<feature name="Compass">
+    <param name="android-package" value="org.apache.cordova.CompassListener" />
+</feature>
+
+	<feature name="Geolocation">
+    <param name="android-package" value="org.apache.cordova.GeoBroker" />
+</feature>
+	
+	<feature name="Storage">
+    <param name="android-package" value="org.apache.cordova.Storage" />
+</feature>
+
+	<feature name="Media">
+    <param name="android-package" value="org.apache.cordova.AudioHandler" />
+</feature>
 
 </widget>
