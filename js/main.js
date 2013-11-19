@@ -81,7 +81,7 @@ var app = {
         var self = this;
         this.detailsURL = /^#employees\/(\d{1,})/;
         this.registerEvents();
-        this.store = new MemoryStore(function() {
+        this.store = new LocalStorageStore(function() {
             self.route();
         });
     }
