@@ -1,0 +1,1 @@
+﻿This is a beta version of the eConference mobile application designed for testing purpose.
